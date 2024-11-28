@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: blueviolet;
+  color: aliceblue;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 20px;
+  font-family: "Varela Round", serif;
+}
+nav ul {
+  list-style-type: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 60px;
+  position: relative;
+}
+
+.imgBox img {
+  width: 75px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 7vw);
+  grid-template-rows: repeat(3, 7vw);
+}
+
+.box {
+  border: 2px solid black;
+  font-family: "Parkinsans", sans-serif;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box:hover {
+  background-color: rgb(244, 238, 251);
+}
+.gameInfo {
+  padding: 0 30px;
+  font-family: "Baloo Bhaina 2", sans-serif;
+  font-size: 1rem;
+}
+.imgBox img {
+  width: 0;
+  /* position: relative;
+  left: -25px; */
+  transition: width 0.5s linear;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.reset {
+  cursor: pointer;
+}
+.line {
+  width: 0vw;
+  height: 3px;
+  position: absolute;
+  background-color: rgb(255, 0, 0);
+  transform: translate(0, 0) rotate(0deg);
+  /* transition: width 1s linear;
+  transition: transform 0s linear; */
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  /* .game {
+    grid-template-columns: repeat(3, 17vw);
+    grid-template-rows: repeat(3, 17vw);
+  } */
+}
