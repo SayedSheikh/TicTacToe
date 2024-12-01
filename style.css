@@ -21,7 +21,6 @@ nav ul {
   display: flex;
   justify-content: center;
   margin: 40px 60px;
-  position: relative;
 }
 
 .imgBox img {
@@ -32,6 +31,7 @@ nav ul {
   display: grid;
   grid-template-columns: repeat(3, 7vw);
   grid-template-rows: repeat(3, 7vw);
+  position: relative;
 }
 
 .box {
@@ -50,6 +50,7 @@ nav ul {
   padding: 0 30px;
   font-family: "Baloo Bhaina 2", sans-serif;
   font-size: 1rem;
+  line-height: 33px;
 }
 .imgBox img {
   width: 0;
@@ -74,13 +75,33 @@ nav ul {
   cursor: pointer;
 }
 .line {
-  width: 0vw;
+  width: 112%;
   height: 3px;
   position: absolute;
   background-color: rgb(255, 0, 0);
-  transform: translate(0, 0) rotate(0deg);
+  /* transform: translate(0, 0) rotate(0deg); */
+  /* transform-origin: left; */
+  transform: rotate(0deg);
+
+  display: none;
+  top: 0%;
+  left: 0%;
   /* transition: width 1s linear;
   transition: transform 0s linear; */
+}
+
+.reset {
+  height: 32px;
+  width: 88px;
+  font-size: large;
+  border-radius: 15px;
+  margin: 8px 16px;
+  background-color: rgb(135, 225, 150);
+  text-transform: capitalize;
+}
+.info {
+  font-size: larger;
+  font-weight: 500;
 }
 
 @media (max-width: 600px) {
@@ -90,8 +111,8 @@ nav ul {
   h1 {
     font-size: 1.5rem;
   }
-  /* .game {
+  .game {
     grid-template-columns: repeat(3, 17vw);
     grid-template-rows: repeat(3, 17vw);
-  } */
+  }
 }
